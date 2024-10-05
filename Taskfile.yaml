@@ -1,0 +1,36 @@
+version: '3'
+
+tasks:
+  run:local:
+    env:
+      NODE_ENV: "local"
+    cmd: air
+    desc: "Start auto compile watching with local env"
+
+  run:dev:
+    env:
+      NODE_ENV: "development"
+    cmd: air
+    desc: "Start auto compile watching with dev env"
+
+  run:prod:
+    env:
+      NODE_ENV: "production"
+    cmd: air
+    desc: "Start auto compile watching with prod env"
+
+  build:
+    cmd: go build cmd/chesshub/main.go
+    desc: "Build app"
+
+  lint:
+    cmd: golangci-lint run
+    desc: "Run linter"
+
+  lint:fix:
+    cmd: golangci-lint run --fix
+    desc: "Run fixing lint errors"
+
+  test:
+    cmd: go test ./...
+    desc: "Run tests"
