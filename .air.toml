@@ -1,0 +1,10 @@
+[build]
+
+bin = "tmp/main.exe"
+cmd = "go build -o ./tmp/main.exe ./cmd/chesshub/main.go"
+
+root = "."
+
+exclude_dir = ["vendor", "tmp"]
+
+exclude_file = ["_test.go"]
