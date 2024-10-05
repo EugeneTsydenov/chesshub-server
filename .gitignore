@@ -1,2 +1,6 @@
 report.xml
 .idea
+.local.env
+main.exe
+
+./tmp
