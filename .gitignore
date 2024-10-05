@@ -3,4 +3,4 @@ report.xml
 .local.env
 main.exe
 
-./tmp
+tmp
